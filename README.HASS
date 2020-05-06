@@ -1,0 +1,46 @@
+README.HASS
+===========
+(D.Webb, August 2012)
+
+This is the README file for the two program files and a subroutine file
+which integrate Hasslemann's equation for a Pierson-Moskowitz spectrum.
+They calculate dn/dt, where n is the wave action and t is time at given
+values of wavenumber (kx,ky) for a given wave action spectrum.
+
+The code is an updated version of that used for the paper:
+
+   Webb, D.J. (1978) Non-linear transfers between sea waves.
+                             Deep-Sea Research, 25, 279-298.
+
+The files are:
+
+  hass_p.F     : Program to output dn/dt on a regular grid
+  hass_c.F     : Program to output dn/dt at a single point specified
+                     on the command line  i.e. "./hass_c  0.3 0.0".
+  hass_subs.F  : File containing the subroutines which do the work.
+
+The files hass_p.F and hass_c.F contain instructions on how they should be
+compiled.  When the programs are compiled the compiler needs to be able to
+access the module 'iso_fortran_env'.
+
+Options
+
+1.  The range of wavenumbers calculated by program "hass_p" can
+    be modified by changing the parameters defined near the start
+    of the program.
+
+2.  The routine 'snpm', which is used to calculate the wave action
+    at a given wavenumber will also return the value for a
+    Johnswap type spectrum.  Do do this the Johnswap variable gamma
+    (gam), denoting the excess height of the peak, and the two rhos
+    (rhoa and rhob) denoting the width of the peak need to be set
+    in routine hass_f (File hass_f.F).
+
+    If gamma has the value of one, the spectrum corresponds to the
+    Pierson-Moskowitz spectrum
+
+    An additional swell peak can also be specified in routine hass_f.
+    The variables involved are:
+     swx, swy : the wavenumber of the peak of the swell spectrum.
+     swh      : the maximum value of the swell wave action.
+     sww      : the width of the swell peak.
