@@ -9,6 +9,13 @@
 !  wave-wave interactions (Hassleman Integral) at a value of kx and ky
 !  given on the command line.
 !
+! ***  Version 2.1   (December 2020)
+! ***  For unix systems running Fortran 90.
+! ***
+! ***  Copyright 1978, 2012, 2020 D.J. Webb
+! ***  Released under licence GPL-3.0-or-later
+! ***
+!
 !  The command has the form
 !
 !    hass_c  0.3  0.0      : where kx= 0.3 and ky=0.0

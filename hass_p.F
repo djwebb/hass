@@ -11,6 +11,13 @@
 !    amplitude (Phillips constant) = 0.01
 !    spectrum peak                 = 0.3 Hz
 !
+! ***  Version 2.1   (December 2020)
+! ***  For unix systems running Fortran 90.
+! ***
+! ***  Copyright 1978, 2012, 2020 D.J. Webb
+! ***  Released under licence GPL-3.0-or-later
+! ***
+!
 !  If the 2-D wavenumber (kx,ky) is given by (i*dx,j*dy) then
 !  the range of values output are specified by the parameters:
 !

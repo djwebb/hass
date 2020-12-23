@@ -1,11 +1,18 @@
-README.HASS
-===========
-(D.Webb, August 2012)
+program hass
+============
+(D.Webb, December 2020)
 
 This is the README file for the two program files and a subroutine file
 which integrate Hasslemann's equation for a Pierson-Moskowitz spectrum.
 They calculate dn/dt, where n is the wave action and t is time at given
 values of wavenumber (kx,ky) for a given wave action spectrum.
+
+! ***  Version 2.1   (December 2020)
+! ***  For unix systems running Fortran 90.
+! ***
+! ***  Copyright 1978, 2012, 2020 D.J. Webb
+! ***  Released under licence GPL-3.0-or-later
+! ***
 
 The code is an updated version of that used for the paper:
 
